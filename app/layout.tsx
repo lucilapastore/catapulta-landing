@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -19,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`dark ${inter.className} antialiased`}>{children}</body>
+      <body className={`dark ${inter.className} antialiased`}>
+        <Navbar />
+
+        {children}
+      </body>
     </html>
   );
 }

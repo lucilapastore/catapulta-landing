@@ -6,14 +6,12 @@ import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import HowItWorks from "../components/HowItWorks";
 import Integrations from "../components/Integrations";
-import Navbar from "../components/Navbar";
 import ScrollToTop from "../components/ScrollToTop";
 import Sponsors from "../components/Sponsors";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
       <Features />
       <HowItWorks />
