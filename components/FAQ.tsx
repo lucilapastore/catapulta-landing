@@ -1,3 +1,3 @@
 export default function FAQ() {
-  return <div>FAQ</div>;
+  return <section className="h-20 grid place-items-center">FAQ</section>;
 }

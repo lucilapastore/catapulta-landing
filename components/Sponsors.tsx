@@ -1,3 +1,3 @@
 export default function Sponsors() {
-  return <div>Sponsors</div>;
+  return <section className="h-20 grid place-items-center">Sponsors</section>;
 }

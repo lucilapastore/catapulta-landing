@@ -1,3 +1,3 @@
 export default function HowItWorks() {
-  return <div>HowItWorks</div>;
+  return <section className="h-20 grid place-items-center">HowItWorks</section>;
 }

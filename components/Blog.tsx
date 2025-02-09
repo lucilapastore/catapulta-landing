@@ -1,3 +1,3 @@
 export default function Blog() {
-  return <div>Blog</div>;
+  return <section className="h-20 grid place-items-center">Blog</section>;
 }

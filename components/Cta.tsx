@@ -1,3 +1,3 @@
 export default function Cta() {
-  return <div>Cta</div>;
+  return <section className="h-20 grid place-items-center">Cta</section>;
 }

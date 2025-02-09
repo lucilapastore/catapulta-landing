@@ -1,3 +1,5 @@
 export default function Integrations() {
-  return <div>Integrations</div>;
+  return (
+    <section className="h-20 grid place-items-center">Integrations</section>
+  );
 }

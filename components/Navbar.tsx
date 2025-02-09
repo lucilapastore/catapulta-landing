@@ -8,22 +8,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-
-function AppLogo() {
-  return (
-    <Link href="/">
-      <Image
-        priority
-        src="/logo/catapulta_logo.svg"
-        alt="Company Logo"
-        width={163}
-        height={36}
-      />
-    </Link>
-  );
-}
+import { AppLogo } from "./AppLogo";
 
 function CTA() {
   return <Button>Dashboard</Button>;
@@ -34,7 +20,6 @@ function NavigationItems() {
     { name: "Documentation", href: "#documentation" },
     { name: "Integrations", href: "#integrations" },
     { name: "Blog", href: "#blog" },
-    // { name: "Pricing", href: "/" },
   ];
 
   return (
@@ -55,16 +40,18 @@ function NavigationItems() {
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm w-full border-b border-primary max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
-      <nav className="flex items-center justify-between">
+      <nav className="grid grid-cols-2 md:grid-cols-3 items-center place-items-center">
         {/* Logo */}
-        <AppLogo />
+        <Link href="/" className="place-self-start">
+          <AppLogo />
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6">
           <NavigationItems />
         </div>
 
-        <div className="hidden md:flex">
+        <div className="hidden md:flex place-self-end">
           <CTA />
         </div>
 
@@ -77,7 +64,7 @@ export function Navbar() {
             </SheetDescription>
           </SheetHeader>
 
-          <SheetTrigger asChild className="md:hidden">
+          <SheetTrigger asChild className="md:hidden place-self-end">
             <Button variant="ghost" size="icon">
               <Menu className="h-6 w-6" />
             </Button>
