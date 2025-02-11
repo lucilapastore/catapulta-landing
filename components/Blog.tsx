@@ -95,9 +95,12 @@ export default function Blog() {
 
                 <CardContent className="p-6 pt-0">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="inline-block bg-emerald-400/10 text-primary border px-3 py-1 rounded-full text-sm bg-secondary border-primary border text-secondary-foreground hover:bg-secondary/80">
+                    <Button
+                      variant="secondary"
+                      // className="inline-block px-3 py-1 rounded-full text-sm bg-secondary border-primary border text-secondary-foreground hover:bg-secondary/80"
+                    >
                       {post.category}
-                    </span>
+                    </Button>
                     <span className="text-muted hover:text-primary/90 text-sm">
                       {post.readTime}
                     </span>
