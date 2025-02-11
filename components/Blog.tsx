@@ -4,7 +4,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import blog_1 from "../public/blog/blog_1.png";
@@ -76,7 +76,7 @@ export default function Blog() {
           {blogPosts.map((post, index) => (
             <Card
               key={index}
-              className="group bg-zinc-900 rounded-3xl transition-transform hover:-translate-y-1 dark-card border-gray-500"
+              className="group bg-zinc-900 rounded-3xl transition-transform hover:-translate-y-1 dark-card border-muted"
             >
               <Link
                 href={post.href}
@@ -98,7 +98,7 @@ export default function Blog() {
                     <span className="inline-block bg-emerald-400/10 text-emerald-400 px-3 py-1 rounded-full text-sm">
                       {post.category}
                     </span>
-                    <span className="text-gray-400 text-sm">
+                    <span className="text-muted hover:text-primary/90 text-sm">
                       {post.readTime}
                     </span>
                   </div>
@@ -106,10 +106,10 @@ export default function Blog() {
                   <p className="text-gray-400 mb-4">{post.description}</p>
                 </CardContent>
 
-                <CardFooter className="p-6 pt-0">
-                  <div className="flex items-center text-sm font-medium">
+                <CardFooter className="p-6 pt-0 justify-end">
+                  <div className="flex text-sm font-medium dark-text-primary group-hover:text-primary/90">
                     Read more
-                    <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                    <ChevronRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </div>
                 </CardFooter>
               </Link>
