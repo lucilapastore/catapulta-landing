@@ -1,5 +1,4 @@
 import Blog from "@/components/Blog";
-import Cta from "@/components/Cta";
 import FAQ from "@/components/FAQ";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
@@ -19,7 +18,6 @@ export default function Home() {
       <Stats />
       <Blog />
       <FAQ />
-      <Cta />
     </>
   );
 }
