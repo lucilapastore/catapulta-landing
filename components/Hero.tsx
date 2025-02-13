@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 function BackgroundLight() {
@@ -42,10 +43,12 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col gap-4 justify-center items-center">
-          <Button>
-            <Image src="icons/github.svg" alt="" width={24} height={24} /> Get
-            started with Github
-          </Button>
+          <Link href="https://github.com/catapulta-sh">
+            <Button>
+              <Image src="icons/github.svg" alt="" width={24} height={24} /> Get
+              started with Github
+            </Button>
+          </Link>
 
           <p>
             Sign up for free and access 

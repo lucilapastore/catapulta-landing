@@ -35,19 +35,19 @@ const socialLinks: SocialLink[] = [
   },
   {
     label: "Twitter",
-    href: "https://twitter.com",
+    href: "https://x.com/catapulta_sh",
     icon: Twitter,
     newTab: true,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/catapulta-sh/",
     icon: Linkedin,
     newTab: true,
   },
   {
     label: "YouTube",
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/@catapulta_sh",
     icon: Youtube,
     newTab: true,
   },
