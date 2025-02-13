@@ -1,3 +1,5 @@
+import { Button } from "./ui/button";
+
 export default function StatsSection() {
   const stats = [
     {
@@ -16,19 +18,19 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="bg-black text-white py-24 grid place-items-center">
+    <section className="bg-background/80 text-white py-24 grid place-items-center w-full min-h-screen px-4 md:px-6 lg:px-8 container place-items-center grid flex-col justify-center items-center max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 lg:mb-0">
             Stats and success stories
           </h2>
           <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
-            <p className="text-lg md:text-xl text-gray-300">
+            <p className="text-lg md:text-xl text-muted">
               Be part of the success — start deploying smarter today.
             </p>
-            <button className="bg-emerald-400 hover:bg-emerald-500 text-black px-6 py-2 rounded-full font-medium transition-colors">
+            <Button className="bg-primary hover:bg-emerald-500 text-black px-6 py-2 rounded-full font-medium transition-colors">
               Start deploying
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -36,7 +38,7 @@ export default function StatsSection() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="relative p-8 rounded-2xl bg-gray-900/50 border border-gray-800 backdrop-blur-sm"
+              className="relative p-8 rounded-2xl bg-background/80 border border-gray-800 backdrop-blur-sm"
             >
               {stat.number ? (
                 <>
