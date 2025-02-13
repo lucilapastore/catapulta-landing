@@ -7,6 +7,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import arbitrum from "@/public/blockchains/arbitrum.png";
+import base from "@/public/blockchains/base.png";
 import polygon from "@/public/blockchains/polygon.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,28 +38,28 @@ const items: CarouselItem[] = [
   {
     id: 3,
     name: "Base",
-    logo: "",
+    logo: base.src,
     url: "https://base.org",
     openInNewTab: true,
   },
   {
     id: 4,
     name: "Polygon",
-    logo: "",
+    logo: polygon.src,
     url: "https://polygon.technology",
     openInNewTab: true,
   },
   {
     id: 5,
     name: "Arbitrum",
-    logo: "",
+    logo: arbitrum.src,
     url: "https://arbitrum.io",
     openInNewTab: true,
   },
   {
     id: 6,
     name: "Base",
-    logo: "",
+    logo: base.src,
     url: "https://base.org",
     openInNewTab: true,
   },
