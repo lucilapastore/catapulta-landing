@@ -68,12 +68,16 @@ const items: CarouselItem[] = [
 
 export default function Sponsors() {
   return (
-    <div className="w-full grid container place-items-center bg-background/80 flex-col justify-center items-center max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
-      <div className="container mx-auto px-4">
+    <section className="w-full bg-background/80">
+      {/* Contained header */}
+      <div className="max-w-[1140px] mx-auto px-4 md:px-16">
         <h2 className="text-center text-white text-4xl md:text-5xl font-bold mb-12">
           +20 EVM-compatible <span className="text-primary">blockchains</span>
         </h2>
+      </div>
 
+      {/* Full width carousel section */}
+      <div className="w-full overflow-hidden">
         <Carousel
           opts={{
             dragFree: true,
@@ -83,13 +87,13 @@ export default function Sponsors() {
               delay: 2000,
             }),
           ]}
-          className="w-full max-w-6xl mx-auto"
+          className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
+                className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6"
               >
                 <Link
                   href={item.url}
@@ -111,6 +115,6 @@ export default function Sponsors() {
           </CarouselContent>
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 }

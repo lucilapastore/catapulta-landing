@@ -76,7 +76,7 @@ export default function Blog() {
           {blogPosts.map((post, index) => (
             <Card
               key={index}
-              className="group bg-zinc-900 rounded-3xl transition-transform hover:-translate-y-1 dark-card border-muted"
+              className="group bg-background/80  rounded-3xl transition-transform hover:-translate-y-1 dark-card border-muted"
             >
               <Link
                 href={post.href}

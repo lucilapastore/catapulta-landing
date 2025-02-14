@@ -28,7 +28,7 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="w-full min-h-screen bg-black text-white py-16 px-4 md:px-6 lg:px-8">
+    <section className="w-full min-h-screen bg-background/80  text-white py-16 px-4 md:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4">
