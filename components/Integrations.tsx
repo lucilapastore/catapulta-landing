@@ -55,7 +55,7 @@ const integrations: Integration[] = [
 
 export default function Integrations() {
   return (
-    <div className="bg-black text-white min-h-screen py-16 relative overflow-hidden grid place-items-center container bg-background/80 flex-col justify-center items-center max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
+    <div className="bg-black text-white min-h-screen relative overflow-hidden grid place-items-center container bg-background/80 flex-col justify-center items-center max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
       {/* Grid background */}
       <div
         className="absolute inset-0 opacity-20"
