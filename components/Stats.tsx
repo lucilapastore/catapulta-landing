@@ -18,7 +18,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="bg-background/80 text-white py-24 grid place-items-center w-full min-h-screen px-4 md:px-6 lg:px-8 container place-items-center grid flex-col justify-center items-center max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
+    <section className="bg-background/80 text-white py-24 place-items-center w-full min-h-screen px-4 md:px-6 lg:px-8 container grid flex-col justify-center items-center max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-4 lg:mb-0 tracking-tight ">

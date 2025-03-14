@@ -1,4 +1,5 @@
 import { Code } from "lucide-react";
+import Image from "next/image";
 
 export default function HowItWorks() {
   return (
@@ -29,29 +30,16 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        {/* Dashboard UI - Responsive layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-16">
-          <div className="lg:col-span-3 bg-zinc-900 rounded-xl p-6">
-            <div className="space-y-2 mb-6">
-              <p className="text-gray-300">Report Name: DeployTrebuchets.sol</p>
-              <p className="text-gray-300">
-                Report UUID: 6b5e2a04-9e88-758a-5s45f-354g865486d5
-              </p>
-              <p className="text-gray-300">Created at: 19/10/2023, 14:06:52</p>
-              <p className="text-gray-300">Notes:</p>
-            </div>
-            <button className="border border-gray-700 rounded-md px-4 py-2 text-gray-300 hover:bg-gray-800 transition">
-              Add notes
-            </button>
-          </div>
-          <div className="bg-zinc-900 rounded-xl p-6">
-            <div className="space-y-2">
-              <p className="text-gray-300">Sandbox ID: DeployTrebu...</p>
-              <p className="text-gray-300">Original chain id: 6b5e2a0...</p>
-              <p className="text-gray-300">Fork chain ID:</p>
-              <p className="text-gray-300">Sandbox RPC URL:</p>
-            </div>
-          </div>
+        {/* Dashboard Image */}
+        <div className="relative h-[300px] w-full mb-16 rounded-xl overflow-hidden">
+          <Image
+            src="/images/how_it_works-copy.png"
+            alt="Catapulta dashboard interface"
+            fill
+            priority
+            className="object-cover"
+            quality={100}
+          />
         </div>
 
         {/* Monitor Results Section */}
