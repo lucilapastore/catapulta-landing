@@ -91,9 +91,12 @@ export default function Integrations() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          {/* Change the location of the Previous and Next buttons */}
-          <CarouselPrevious className="hidden sm:flex -left-12 lg:-left-16" />
-          <CarouselNext className="hidden sm:flex -right-12 lg:-right-16" />
+
+          {/* Navigation buttons wrapper */}
+          <div className="flex justify-end gap-2 mt-8">
+            <CarouselPrevious className="static sm:flex h-8 w-8" />
+            <CarouselNext className="static sm:flex h-8 w-8" />
+          </div>
         </Carousel>
       </div>
     </div>
