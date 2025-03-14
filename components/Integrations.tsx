@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/carousel";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-
 interface Integration {
   title: string;
   subtitle: string;
@@ -23,7 +22,7 @@ const integrations: Integration[] = [
     subtitle: "Developer tooling",
     description:
       "Hardhat is a development environment for smart contracts, providing tools to edit, compile, debug, and deploy decentralized applications.",
-    icon: "",
+    icon: "/integrations/hardhat.png",
     href: "/integrations/hardhat",
   },
   {
@@ -31,7 +30,7 @@ const integrations: Integration[] = [
     subtitle: "RPC Proxy & TX Monitoring",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ac pellentesque augue ac orci dui ullamcorper fermentum dolor vitae.",
-    icon: "",
+    icon: "/integrations/gashawk.png",
     href: "/integrations/gashawk",
     openInNewTab: true,
   },
@@ -40,7 +39,7 @@ const integrations: Integration[] = [
     subtitle: "Developer tooling",
     description:
       "Lorem ipsum dolor sit amet consectetur. Orci turpis nam malesuada feugiat est.",
-    icon: "",
+    icon: "/integrations/foundry.png",
     href: "/integrations/foundry",
   },
   {
@@ -48,7 +47,7 @@ const integrations: Integration[] = [
     subtitle: "Sandbox & tooling",
     description:
       "Lorem ipsum dolor sit amet consectetur. Ac viverra posuere libero purus egestas.",
-    icon: "",
+    icon: "/integrations/buildbear.png",
     href: "/integrations/buildbear",
   },
 ];
