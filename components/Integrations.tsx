@@ -14,6 +14,7 @@ interface Integration {
   icon: string;
   href: string;
   openInNewTab?: boolean;
+  gradient: string;
 }
 
 const integrations: Integration[] = [
@@ -24,6 +25,7 @@ const integrations: Integration[] = [
       "Hardhat is a development environment for smart contracts, providing tools to edit, compile, debug, and deploy decentralized applications.",
     icon: "/integrations/hardhat.png",
     href: "/integrations/hardhat",
+    gradient: "from-purple-900/90 via-purple-800/50 to-yellow-900/30",
   },
   {
     title: "GasHawk",
@@ -33,6 +35,7 @@ const integrations: Integration[] = [
     icon: "/integrations/gashawk.png",
     href: "/integrations/gashawk",
     openInNewTab: true,
+    gradient: "from-amber-950/90 via-amber-900/50 to-orange-900/30",
   },
   {
     title: "Foundry",
@@ -41,6 +44,7 @@ const integrations: Integration[] = [
       "Lorem ipsum dolor sit amet consectetur. Orci turpis nam malesuada feugiat est.",
     icon: "/integrations/foundry.png",
     href: "/integrations/foundry",
+    gradient: "from-gray-900/90 via-gray-800/50 to-gray-700/30",
   },
   {
     title: "BuildBear",
@@ -49,6 +53,7 @@ const integrations: Integration[] = [
       "Lorem ipsum dolor sit amet consectetur. Ac viverra posuere libero purus egestas.",
     icon: "/integrations/buildbear.png",
     href: "/integrations/buildbear",
+    gradient: "from-gray-900/90 via-slate-800/50 to-gray-800/30",
   },
 ];
 
@@ -86,6 +91,7 @@ export default function Integrations() {
               </CarouselItem>
             ))}
           </CarouselContent>
+          {/* Change the location of the Previous and Next buttons */}
           <CarouselPrevious className="hidden sm:flex -left-12 lg:-left-16" />
           <CarouselNext className="hidden sm:flex -right-12 lg:-right-16" />
         </Carousel>
@@ -101,6 +107,7 @@ function IntegrationCard({
   icon,
   href,
   openInNewTab,
+  gradient,
 }: Integration) {
   return (
     <a
@@ -109,7 +116,9 @@ function IntegrationCard({
       rel={openInNewTab ? "noopener noreferrer" : undefined}
       className="block group h-[200px]" // Add fixed height here
     >
-      <div className="relative rounded-2xl p-6 h-full bg-gradient-to-br from-gray-900/90 to-gray-800/50 backdrop-blur-sm border border-gray-800 hover:border-gray-700 transition-colors mr-4">
+      <div
+        className={`relative rounded-2xl p-6 h-full bg-gradient-to-br ${gradient} backdrop-blur-sm border border-gray-800 hover:border-gray-700 transition-colors mr-4`}
+      >
         <div className="flex justify-between items-start mb-4">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8">
@@ -123,7 +132,7 @@ function IntegrationCard({
             </div>
             <div>
               <h3 className="font-semibold text-lg">{title}</h3>
-              <p className="text-sm text-gray-400">{subtitle}</p>
+              <p className="text-xs text-gray-400">{subtitle}</p>
             </div>
           </div>
           <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
