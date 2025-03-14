@@ -107,9 +107,9 @@ function IntegrationCard({
       href={href}
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}
-      className="block group h-[250px]" // Add fixed height here
+      className="block group h-[200px]" // Add fixed height here
     >
-      <div className="relative rounded-2xl p-6 h-full bg-gradient-to-br from-gray-900/90 to-gray-800/50 backdrop-blur-sm border border-gray-800 hover:border-gray-700 transition-colors">
+      <div className="relative rounded-2xl p-6 h-full bg-gradient-to-br from-gray-900/90 to-gray-800/50 backdrop-blur-sm border border-gray-800 hover:border-gray-700 transition-colors mr-4">
         <div className="flex justify-between items-start mb-4">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8">
