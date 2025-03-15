@@ -28,9 +28,7 @@ export default function StatsSection() {
             <p className="text-base md:text-base text-foreground">
               Be part of the success — start deploying smarter today.
             </p>
-            <Button className="bg-primary hover:bg-emerald-500 text-black px-6 py-2 rounded-full font-medium transition-colors">
-              Start deploying
-            </Button>
+            <Button>Start deploying</Button>
           </div>
         </div>
 
@@ -45,12 +43,12 @@ export default function StatsSection() {
                   <div className="text-4xl md:text-5xl font-bold mb-4">
                     {stat.number}
                   </div>
-                  <p className="text-gray-400">{stat.description}</p>
+                  <p>{stat.description}</p>
                 </>
               ) : (
                 <>
                   <h3 className="text-2xl font-bold mb-4">{stat.title}</h3>
-                  <p className="text-gray-400">{stat.description}</p>
+                  <p>{stat.description}</p>
                 </>
               )}
             </div>

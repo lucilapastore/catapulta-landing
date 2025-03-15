@@ -36,3 +36,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+.fade-out-bottom-right {
+  mask-image: radial-gradient(circle at bottom right, transparent, black);
+  -webkit-mask-image: radial-gradient(
+    circle at bottom right,
+    transparent,
+    black
+  );
+}
