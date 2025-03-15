@@ -6,8 +6,8 @@ export default function HowItWorks() {
     <main className="min-h-screen bg-black text-white grid place-items-center">
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="flex flex-col items-center text-center mb-8">
-          <div className="text-emerald-400 text-sm uppercase tracking-wider mb-4 flex items-center">
-            <div className="h-px w-6 bg-emerald-400 mr-2"></div>
+          <div className="text-primary text-sm  tracking-wider mb-4 flex items-center">
+            <div className="h-px w-6 bg-emerald-400 mr-2 "></div>
             How it works
             <div className="h-px w-6 bg-emerald-400 ml-2"></div>
           </div>
@@ -15,18 +15,13 @@ export default function HowItWorks() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 max-w-4xl">
             Deploying contracts in multiple chains is{" "}
             <span className="relative">
-              <span className="line-through opacity-50">difficult</span>{" "}
+              <span className="line-through">difficult</span>{" "}
               <span className="text-emerald-400">easy</span>
             </span>
           </h1>
 
           <p className="text-gray-300 max-w-2xl mb-8">
             Compatible and gas-free in the main EVMs.
-          </p>
-
-          <p className="text-gray-400 max-w-3xl mb-12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros.
           </p>
         </div>
 
