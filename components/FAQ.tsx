@@ -32,9 +32,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4">
-          <p className="text-emerald-500 text-sm uppercase tracking-wider">
-            FAQs
-          </p>
+          <p className="text-primary text-sm uppercase tracking-wider">FAQs</p>
           <h2 className="text-4xl md:text-5xl font-bold">
             We are here to help you
           </h2>
