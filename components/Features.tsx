@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Features() {
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
@@ -55,6 +57,20 @@ export default function Features() {
             <button className="px-4 py-2 text-[#cccccc] hover:bg-[#111111] rounded-full text-sm transition-colors">
               Tools
             </button>
+          </div>
+        </div>
+
+        {/* Right side content - Image */}
+        <div className="w-full md:w-1/2 relative">
+          <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+            <Image
+              src="/images/features.png"
+              alt="Catapulta features interface"
+              fill
+              priority
+              className="object-cover"
+              quality={100}
+            />
           </div>
         </div>
       </div>
