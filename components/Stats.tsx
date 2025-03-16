@@ -1,4 +1,6 @@
-import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 
 export default function StatsSection() {
   const stats = [
@@ -23,18 +25,14 @@ export default function StatsSection() {
 
   return (
     <section className="container mx-auto px-4 py-16 md:py-24 max-w-7xl">
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
-        <div className="space-y-2">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 lg:mb-0 tracking-tight">
-            Stats and success stories
-          </h2>
+      <div className="space-y-2 mb-8 text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 lg:mb-0 tracking-tight">
+          Stats and success stories
+        </h2>
 
-          <p className="text-base text-muted-foreground">
-            Be part of the success — start deploying smarter today.
-          </p>
-        </div>
-
-        <Button>Start deploying</Button>
+        <p className="text-base mx-auto text-muted-foreground max-w-prose">
+          Be part of the success — start deploying smarter today.
+        </p>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -53,10 +51,21 @@ export default function StatsSection() {
         ))}
       </div>
 
-      <p className="text-sm text-muted-foreground text-center mt-8 max-w-2xl mx-auto">
+      <p className="max-w-prose text-sm text-muted-foreground text-center mt-8 mx-auto">
         Aave DAO used Catapulta to deploy Lido and EtherFi instances, saving
         weeks of work and enhancing collaboration among providers.
       </p>
+
+      <div className="flex justify-center mt-8">
+        <Link
+          className={cn(buttonVariants())}
+          href=""
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Start deploying
+        </Link>
+      </div>
     </section>
   );
 }
