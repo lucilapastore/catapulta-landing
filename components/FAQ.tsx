@@ -36,7 +36,7 @@ export default function FAQ() {
           <h2 className="text-4xl md:text-5xl font-bold">
             We are here to help you
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             varius enim in eros elementum tristique.
           </p>
@@ -53,7 +53,7 @@ export default function FAQ() {
               <AccordionTrigger className="text-left hover:no-underline">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-400">
+              <AccordionContent className="text-muted-foreground">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -65,7 +65,7 @@ export default function FAQ() {
           <h3 className="text-3xl md:text-4xl font-bold">
             Still have questions?
           </h3>
-          <p className="text-gray-400">
+          <p className="text-muted-foreground">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <Button
