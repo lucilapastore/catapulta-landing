@@ -76,7 +76,7 @@ const FEATURES_TABS = [
   },
 ];
 
-export default function Component() {
+export default function FeaturesTabs() {
   return (
     <Tabs defaultValue={FEATURES_TABS[0].id} className="z-50">
       {FEATURES_TABS.map((tab) => (
