@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/carousel";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { Card } from "./ui/card";
+
 interface Integration {
   title: string;
   subtitle: string;
@@ -14,7 +16,8 @@ interface Integration {
   icon: string;
   href: string;
   openInNewTab?: boolean;
-  gradient: string;
+  gradientFrom: string;
+  gradientTo: string;
 }
 
 const integrations: Integration[] = [
@@ -25,7 +28,8 @@ const integrations: Integration[] = [
       "Hardhat is a development environment for smart contracts, providing tools to edit, compile, debug, and deploy decentralized applications.",
     icon: "/integrations/hardhat.png",
     href: "/integrations/hardhat",
-    gradient: "from-purple-900/90 via-purple-800/50 to-yellow-900/30",
+    gradientFrom: "purple-900/90",
+    gradientTo: "yellow-900/30",
   },
   {
     title: "GasHawk",
@@ -35,7 +39,8 @@ const integrations: Integration[] = [
     icon: "/integrations/gashawk.png",
     href: "/integrations/gashawk",
     openInNewTab: true,
-    gradient: "from-amber-950/90 via-amber-900/50 to-orange-900/30",
+    gradientFrom: "amber-950/90",
+    gradientTo: "amber-900/30",
   },
   {
     title: "Foundry",
@@ -44,7 +49,8 @@ const integrations: Integration[] = [
       "Lorem ipsum dolor sit amet consectetur. Orci turpis nam malesuada feugiat est.",
     icon: "/integrations/foundry.png",
     href: "/integrations/foundry",
-    gradient: "from-gray-900/90 via-gray-800/50 to-gray-700/30",
+    gradientFrom: "gray-900/90",
+    gradientTo: "gray-700/30",
   },
   {
     title: "BuildBear",
@@ -53,27 +59,19 @@ const integrations: Integration[] = [
       "Lorem ipsum dolor sit amet consectetur. Ac viverra posuere libero purus egestas.",
     icon: "/integrations/buildbear.png",
     href: "/integrations/buildbear",
-    gradient: "from-gray-900/90 via-slate-800/50 to-gray-800/30",
+    gradientFrom: "gray-900/90",
+    gradientTo: "gray-800/30",
   },
 ];
 
 export default function Integrations() {
   return (
-    <div className="bg-black text-white min-h-screen relative overflow-hidden grid place-items-center container bg-background/80 flex-col justify-center items-center max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
-      {/* Grid background */}
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(to right, #1a1a1a 1px, transparent 1px)`,
-          backgroundSize: "50px 50px",
-        }}
-      />
-
+    <section className="w-full bg-background/80 text-white py-16 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mb-8">
-          <div className="text-emerald-400 mb-4">How it works</div>
+          <div className="text-primary mb-4">How it works</div>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">Integrations</h2>
-          <p className="text-gray-400 max-w-3xl text-lg">
+          <p className="text-muted-foreground max-w-3xl text-lg">
             Catapulta aims to support as many integrations as possible that
             speeds up Web3 development. If you want to request a new
             integration, apply below.
@@ -93,13 +91,13 @@ export default function Integrations() {
           </CarouselContent>
 
           {/* Navigation buttons wrapper */}
-          <div className="flex justify-end gap-2 mt-8">
+          <div className="flex justify-end gap-2 mt-8 pr-4">
             <CarouselPrevious className="static sm:flex h-8 w-8" />
             <CarouselNext className="static sm:flex h-8 w-8" />
           </div>
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -110,21 +108,22 @@ function IntegrationCard({
   icon,
   href,
   openInNewTab,
-  gradient,
+  gradientFrom,
+  gradientTo,
 }: Integration) {
   return (
     <a
       href={href}
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}
-      className="block group h-[200px]" // Add fixed height here
+      className="block group h-full"
     >
-      <div
-        className={`relative rounded-2xl p-6 h-full bg-gradient-to-br ${gradient} backdrop-blur-sm border border-gray-800 hover:border-gray-700 transition-colors mr-4`}
+      <Card
+        className={`relative rounded-2xl p-6 from-${gradientFrom} to-${gradientTo} bg-[radial-gradient(ellipse_at_bottom_center,var(--tw-gradient-from),var(--tw-gradient-to))] border-muted/30 border transition-colors mr-4 h-full flex flex-col`}
       >
         <div className="flex justify-between items-start mb-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8">
+            <div className="size-8">
               <Image
                 src={icon || "/placeholder.svg"}
                 alt={`${title} icon`}
@@ -133,15 +132,19 @@ function IntegrationCard({
                 className="w-full h-full object-contain"
               />
             </div>
+
             <div>
               <h3 className="font-semibold text-lg">{title}</h3>
-              <p className="text-xs text-gray-400">{subtitle}</p>
+              <p className="text-xs text-muted-foreground">{subtitle}</p>
             </div>
           </div>
-          <ArrowUpRight className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+
+          <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors" />
         </div>
-        <p className="text-gray-400 text-sm line-clamp-3">{description}</p>
-      </div>
+        <p className="text-muted-foreground text-sm line-clamp-3 flex-grow">
+          {description}
+        </p>
+      </Card>
     </a>
   );
 }

@@ -1,16 +1,11 @@
 "use client";
-import Autoplay from "embla-carousel-autoplay";
 
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
 import arbitrum from "@/public/blockchains/arbitrum.png";
 import base from "@/public/blockchains/base.png";
 import polygon from "@/public/blockchains/polygon.png";
 import Image from "next/image";
 import Link from "next/link";
+import { Marquee } from "./ui/marquee";
 
 interface CarouselItem {
   id: number;
@@ -76,44 +71,30 @@ export default function Sponsors() {
         </h2>
       </div>
 
-      {/* Full width carousel section */}
-      <div className="w-full overflow-hidden">
-        <Carousel
-          opts={{
-            dragFree: true,
-          }}
-          plugins={[
-            Autoplay({
-              delay: 2000,
-            }),
-          ]}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {items.map((item) => (
-              <CarouselItem
-                key={item.id}
-                className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6"
-              >
-                <Link
-                  href={item.url}
-                  target={item.openInNewTab ? "_blank" : "_self"}
-                  rel={item.openInNewTab ? "noopener noreferrer" : ""}
-                  className="block p-4 hover:opacity-80 transition-opacity"
-                >
-                  <div className="aspect-[3/2] relative">
-                    <Image
-                      src={item.logo || "/placeholder.svg"}
-                      alt={`${item.name} logo`}
-                      fill
-                      className="object-contain brightness-0 invert"
-                    />
-                  </div>
-                </Link>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+        <Marquee pauseOnHover className="[--duration:20s]">
+          {items.map((item) => (
+            <Link
+              key={item.id}
+              href={item.url}
+              target={item.openInNewTab ? "_blank" : "_self"}
+              rel={item.openInNewTab ? "noopener noreferrer" : ""}
+              className="mx-8 block hover:opacity-80 transition-opacity"
+            >
+              <div className="h-16 w-32 relative">
+                <Image
+                  src={item.logo || "/placeholder.svg"}
+                  alt={`${item.name} logo`}
+                  fill
+                  className="object-contain brightness-0 invert"
+                />
+              </div>
+            </Link>
+          ))}
+        </Marquee>
+
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background/80"></div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background/80"></div>
       </div>
     </section>
   );
