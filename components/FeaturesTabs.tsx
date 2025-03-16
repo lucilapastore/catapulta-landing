@@ -102,7 +102,7 @@ export default function FeaturesTabs() {
         </TabsContent>
       ))}
 
-      <TabsList className="gap-1 bg-background border border-primary">
+      <TabsList className="gap-1 bg-background border-primary flex-wrap border-0 sm:border">
         {FEATURES_TABS.map((tab, index) => (
           <TabsTrigger
             key={index}

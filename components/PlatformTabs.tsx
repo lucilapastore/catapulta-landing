@@ -79,7 +79,7 @@ export default function PlatformTabs() {
           </TabsContent>
         ))}
 
-        <TabsList className="h-auto rounded-none bg-transparent p-0 justify-center">
+        <TabsList className="h-auto rounded-none bg-transparent p-0 justify-center flex-wrap">
           {platformTabs.map(({ id, label }) => (
             <TabsTrigger
               key={id}

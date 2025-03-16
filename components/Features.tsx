@@ -21,14 +21,14 @@ export default function Features() {
           <div className="w-full md:w-1/2 mb-10 md:mb-0">
             <span className="text-primary mb-6 text-sm uppercase tracking-wider flex items-center">
               Features{" "}
-              <span className="ml-2 inline-block w-6 h-[1px] bg-[#2be195]"></span>
+              <span className="ml-2 inline-block w-6 h-[1px] bg-primary"></span>
             </span>
 
             <FeaturesTabs />
           </div>
 
           <div className="w-full md:w-1/2">
-            <div className="relative aspect-[16/9] rounded-xl overflow-hidden">
+            <div className="relative bg-background aspect-[16/9] rounded-xl overflow-hidden">
               <Image
                 src="/images/features.png"
                 alt="Catapulta features interface"
