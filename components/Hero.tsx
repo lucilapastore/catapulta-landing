@@ -10,21 +10,23 @@ function BackgroundLight() {
 
 function BackgroundImages() {
   return (
-    <Image
-      src="/images/hero_platform.png"
-      alt="Hero Background"
-      width={1050}
-      height={643}
-      quality={100}
-      className="absolute z-10 ml-20 bottom-[-200px] left-1/2 -translate-x-1/2"
-    />
+    <>
+      <Image
+        src="/images/hero_platform.png"
+        alt="Hero Background"
+        width={1050}
+        height={643}
+        quality={100}
+        className="absolute z-10 ml-20 bottom-[-200px] left-1/2 -translate-x-1/2"
+      />
+    </>
   );
 }
 
 export default function Hero() {
   return (
     <section className="relative w-full [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]">
-      <div className="*:z-20 min-h-screen text-center px-4 flex flex-col justify-center items-center gap-8 max-w-2xl mx-auto">
+      <div className="*:z-20 min-h-[calc(100dvh-240px)] text-center px-4 flex flex-col justify-center items-center gap-8 max-w-2xl mx-auto">
         <BackgroundLight />
 
         <BackgroundImages />

@@ -3,8 +3,8 @@ import FeaturesTabs from "./FeaturesTabs";
 
 export default function Features() {
   return (
-    <section className="w-full bg-background/80 text-white py-16 px-4 md:px-6 lg:px-8">
-      <div className=" bg-black relative overflow-hidden">
+    <section className="w-full py-16 px-4 md:px-6 lg:px-8">
+      <div className="relative overflow-hidden">
         {/* Dot pattern background */}
         <div
           className="absolute inset-0 opacity-20 max-w-96 ml-[-100px]"

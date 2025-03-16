@@ -119,7 +119,7 @@ function IntegrationCard({
       className="block group h-full"
     >
       <Card
-        className={`relative rounded-2xl p-6 from-${gradientFrom} to-${gradientTo} bg-[radial-gradient(ellipse_at_bottom_center,var(--tw-gradient-from),var(--tw-gradient-to))] border-muted/30 border transition-colors mr-4 h-full flex flex-col`}
+        className={`relative rounded-2xl p-6 from-${gradientFrom} to-${gradientTo} bg-[radial-gradient(ellipse_at_bottom_center,var(--tw-gradient-from),var(--tw-gradient-to))] h-full flex flex-col`}
       >
         <div className="flex justify-between items-start mb-4">
           <div className="flex items-center gap-3">

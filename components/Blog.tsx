@@ -54,71 +54,66 @@ const blogPosts: BlogPost[] = [
 ];
 export default function Blog() {
   return (
-    <section className="container place-items-center bg-background/80 grid flex-col justify-center items-center max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
-      <div>
-        <div className="text-center mb-16">
-          <p className="text-primary mb-4">Blog</p>
-          <h2 className="text-4xl font-bold mb-4 tracking-tight lg:text-5xl">
-            Learning blockchain
-            <br />
-            <span className="text-primary text-4xl font-bold mb-4 tracking-tight lg:text-5xl">
-              programming
-            </span>
-          </h2>
-          <p className="dark-text-foreground mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <Button variant="outline" className="border-white">
-            View All
-          </Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post, index) => (
-            <Card
-              key={index}
-              className="group bg-background/80  rounded-3xl transition-transform hover:-translate-y-1 dark-card border-muted"
+    <section className="container place-items-center bg-background/80 grid flex-col justify-center items-center py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
+      <div className="text-center mb-16">
+        <p className="text-primary mb-4">Blog</p>
+        <h2 className="text-4xl font-bold mb-4 tracking-tight lg:text-5xl">
+          Learning blockchain
+          <br />
+          <span className="text-primary text-4xl font-bold mb-4 tracking-tight lg:text-5xl">
+            programming
+          </span>
+        </h2>
+
+        <p className="mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <Button variant="outline">View All</Button>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {blogPosts.map((post, index) => (
+          <Card
+            key={index}
+            className="group bg-background/80 rounded-3xl transition-transform hover:-translate-y-1"
+          >
+            <Link
+              href={post.href}
+              target={post.openInNewTab ? "_blank" : undefined}
             >
-              <Link
-                href={post.href}
-                target={post.openInNewTab ? "_blank" : undefined}
-              >
-                <CardHeader className="p-6">
-                  <div className="relative aspect-[1.8/1] rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-400/20 to-emerald-400/10">
-                    <Image
-                      src={post.imageUrl || "/placeholder.svg"}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                </CardHeader>
+              <CardHeader className="relative aspect-[1.8/1] m-6">
+                <Image
+                  src={post.imageUrl}
+                  alt={post.title}
+                  fill
+                  className="object-cover rounded-3xl"
+                />
+              </CardHeader>
 
-                <CardContent className="p-6 pt-0">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Button
-                      variant="secondary"
-                      // className="inline-block px-3 py-1 rounded-full text-sm bg-secondary border-primary border text-secondary-foreground hover:bg-secondary/80"
-                    >
-                      {post.category}
-                    </Button>
-                    <span className="text-muted hover:text-primary/90 text-sm">
-                      {post.readTime}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{post.title}</h3>
-                  <p className="text-gray-400 mb-4">{post.description}</p>
-                </CardContent>
+              <CardContent className="p-6 pt-0">
+                <div className="flex items-center gap-4 mb-4">
+                  <Button variant="secondary">{post.category}</Button>
 
-                <CardFooter className="p-6 pt-0 justify-end">
-                  <div className="flex text-sm font-medium dark-text-primary group-hover:text-primary/90">
-                    Read more
-                    <ChevronRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </CardFooter>
-              </Link>
-            </Card>
-          ))}
-        </div>
+                  <span className="text-muted hover:text-primary/90 text-sm">
+                    {post.readTime}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-bold mb-3">{post.title}</h3>
+
+                <p className="text-muted-foreground mb-4">{post.description}</p>
+              </CardContent>
+
+              <CardFooter className="justify-end">
+                <div className="flex items-center text-sm font-medium group-hover:text-primary/90">
+                  Read more
+                  <ChevronRight className="size-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </div>
+              </CardFooter>
+            </Link>
+          </Card>
+        ))}
       </div>
     </section>
   );

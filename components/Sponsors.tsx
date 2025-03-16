@@ -63,7 +63,7 @@ const items: CarouselItem[] = [
 
 export default function Sponsors() {
   return (
-    <section className="w-full bg-background/80">
+    <section className="container mx-auto px-4 py-16 md:py-24">
       {/* Contained header */}
       <div className="max-w-[1140px] mx-auto px-4 md:px-16">
         <h2 className="text-center text-white text-4xl md:text-5xl font-bold mb-12">
