@@ -6,22 +6,21 @@ export default function Features() {
     <section className="w-full py-16 px-4 md:px-6 lg:px-8">
       <div className="relative overflow-hidden">
         {/* Dot pattern background */}
-        <div
-          className="absolute inset-0 opacity-20 max-w-96 ml-[-100px]"
-          style={{
-            backgroundImage: `radial-gradient(#2be195 6px, transparent 6px)`,
-            backgroundSize: "24px 24px",
-            maskImage: `radial-gradient(circle at center, black 30%, transparent 80%)`,
-            WebkitMaskImage: `radial-gradient(circle at center, black 30%, transparent 80%)`,
-          }}
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/features_background.png"
+            alt="Background pattern"
+            fill
+            className="object-contain object-left hue-rotate-[90deg]"
+          />
+        </div>
 
         <div className="container mx-auto px-4 py-16 relative z-10 flex flex-col md:flex-row items-center">
           {/* Left side content */}
           <div className="w-full md:w-1/2 mb-10 md:mb-0">
-            <span className="text-primary mb-6 text-sm uppercase tracking-wider flex items-center">
+            <span className="gradient-text-primary mb-6 text-sm tracking-wider flex items-center">
               Features{" "}
-              <span className="ml-2 inline-block w-6 h-[1px] bg-primary"></span>
+              <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
             </span>
 
             <FeaturesTabs />
