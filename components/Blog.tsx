@@ -76,11 +76,12 @@ export default function Blog() {
         {blogPosts.map((post, index) => (
           <Card
             key={index}
-            className="group bg-background/80 rounded-3xl transition-transform hover:-translate-y-1"
+            className="group bg-background/80 rounded-3xl transition-transform hover:-translate-y-1 flex flex-col h-full"
           >
             <Link
               href={post.href}
               target={post.openInNewTab ? "_blank" : undefined}
+              className="flex flex-col h-full"
             >
               <CardHeader className="relative aspect-[1.8/1] m-6">
                 <Image
@@ -92,7 +93,7 @@ export default function Blog() {
               </CardHeader>
 
               <CardContent className="p-6 pt-0">
-                <div className="flex items-center gap-4 mb-4">
+                <div className="flex items-center gap-4 mb-4 flex-1">
                   <Button variant="secondary">{post.category}</Button>
 
                   <span className="text-muted hover:text-primary/90 text-sm">
@@ -102,10 +103,10 @@ export default function Blog() {
 
                 <h3 className="text-xl font-bold mb-3">{post.title}</h3>
 
-                <p className="text-muted-foreground mb-4">{post.description}</p>
+                <p className="text-muted-foreground">{post.description}</p>
               </CardContent>
 
-              <CardFooter className="justify-end">
+              <CardFooter className="justify-end mt-auto">
                 <div className="flex items-center text-sm font-medium group-hover:text-primary/90">
                   Read more
                   <ChevronRight className="size-4 ml-2 transition-transform group-hover:translate-x-1" />

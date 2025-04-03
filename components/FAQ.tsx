@@ -70,7 +70,8 @@ export default function FAQ() {
           </p>
           <Button
             variant="outline"
-            className="bg-transparent text-emerald-500 border-emerald-500 hover:bg-emerald-500 hover:text-black"
+            size="lg"
+            className="bg-primary text-primary-foreground border-primary hover:bg-emerald-500 hover:text-black"
           >
             Contact
           </Button>
