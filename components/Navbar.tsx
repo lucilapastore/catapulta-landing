@@ -39,7 +39,7 @@ function NavigationItems() {
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm w-full border-b border-primary max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm w-full border-b border-primary max-w-[1140px] py-4 px-4 md:px-16 mx-auto rounded-xs md:mt-8">
       <nav className="grid grid-cols-2 md:grid-cols-3 items-center place-items-center">
         {/* Logo */}
         <Link href="/" className="place-self-start">
