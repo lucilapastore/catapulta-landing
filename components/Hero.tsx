@@ -1,16 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import Balancer from "react-wrap-balancer";
 import { Button } from "./ui/button";
 
 function BackgroundLight() {
   return (
-    <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-56 md:size-96 rounded-full bg-primary blur-[200px] pointer-events-none" />
+    <div className="absolute z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-96 md:size-[30rem] rounded-full bg-primary blur-[200px] pointer-events-none" />
   );
 }
 
 function BackgroundImages() {
   return (
-    <div className="hidden md:block absolute z-20 ml-20 bottom-[-100px] 2xl:bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px]">
+    <div className="hidden md:block absolute z-20 ml-20 bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px]">
       <Image
         src="/images/hero_platform.png"
         alt="Hero Background"
@@ -25,22 +26,28 @@ function BackgroundImages() {
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[calc(100vh-1rem)] [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]">
+    <section className="relative w-full min-h-[calc(100vh-16vh)] [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]">
       <BackgroundImages />
       <BackgroundLight />
 
-      <div className="relative min-h-[calc(100vh-10rem)] flex items-center justify-center">
+      <div className="relative flex items-center min-h-[calc(100vh-34vh)] justify-center">
         <div className="w-full *:z-20 text-center px-4 flex flex-col justify-center items-center gap-8 max-w-2xl mx-auto animate-fade-in-down">
           <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl">
-            Deploy smart <br /> contracts effortlessly
+            <Balancer>
+              Deploy smart <br /> contracts effortlessly
+            </Balancer>
           </h1>
 
           <div className="text-center">
             <h5 className="font-bold text-base lg:text-lg">
-              Accelerate your Web3 journey with our plug-and-play SDK
+              <Balancer>
+                Accelerate your Web3 journey with our plug-and-play SDK
+              </Balancer>
             </h5>
             <p className="text-sm">
-              Effortless Web3 development for developers and teams
+              <Balancer>
+                Effortless Web3 development for developers and teams
+              </Balancer>
             </p>
           </div>
 
