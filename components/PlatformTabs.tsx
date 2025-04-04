@@ -9,7 +9,7 @@ const platformTabs = [
     icon: Copy,
     description: (
       <>
-        <span className="text-emerald-400">
+        <span className="text-primary">
           Start with our battle-tested template.
         </span>{" "}
         Get instant access to a production-ready foundation that has been
@@ -24,9 +24,7 @@ const platformTabs = [
     icon: Code,
     description: (
       <>
-        <span className="text-emerald-400">
-          Skip the tedious configuration.
-        </span>{" "}
+        <span className="text-primary">Skip the tedious configuration.</span>{" "}
         Everything is pre-configured and ready to go, from build settings to
         testing frameworks, saving you hours of setup time.
       </>
@@ -39,7 +37,7 @@ const platformTabs = [
     icon: Rocket,
     description: (
       <>
-        <span className="text-emerald-400">Launch with confidence.</span> Our
+        <span className="text-primary">Launch with confidence.</span> Our
         streamlined deployment process gets your project live in seconds,
         complete with automated checks and optimizations.
       </>
@@ -52,7 +50,7 @@ const platformTabs = [
     icon: LineChart,
     description: (
       <>
-        <span className="text-emerald-400">
+        <span className="text-primary">
           Kickstart your journey with our template.
         </span>{" "}
         This ready-to-use foundation eliminates the hassle of setting up your
@@ -71,7 +69,7 @@ export default function PlatformTabs() {
           <TabsContent key={id} value={id} className="animate-fade-in-up">
             <div className="flex items-center gap-3 mb-4 justify-center">
               <Icon className="w-8 h-8 text-white" />
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-effect">
                 {heading}
               </h2>
             </div>
