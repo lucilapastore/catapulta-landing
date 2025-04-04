@@ -102,12 +102,12 @@ export default function FeaturesTabs() {
         </TabsContent>
       ))}
 
-      <TabsList className="gap-1 bg-background border-primary flex-wrap border-0 sm:border">
+      <TabsList className="gap-1 p-[-3px] bg-background border-primary/40 flex-wrap border-0 sm:border">
         {FEATURES_TABS.map((tab, index) => (
           <TabsTrigger
             key={index}
             value={tab.id}
-            className="py-2 data-[state=active]:bg-primary/30 data-[state=active]:text-white data-[state=active]:border border-primary rounded-full"
+            className="py-2  data-[state=active]:bg-primary/30 data-[state=active]:text-white data-[state=active]:border border-primary rounded-full"
           >
             {tab.label}
           </TabsTrigger>
