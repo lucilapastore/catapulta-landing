@@ -51,6 +51,10 @@
     background: linear-gradient(to right, #2be195 0%, transparent 100%);
   }
 
+  .gradient-line-left {
+    background: linear-gradient(to left, #2be195 0%, transparent 100%);
+  }
+
   .dot-pattern-bg {
     background-image: radial-gradient(
       circle,
