@@ -55,11 +55,13 @@ const blogPosts: BlogPost[] = [
 export default function Blog() {
   return (
     <section className="container place-items-center bg-background/80 grid flex-col justify-center items-center py-4 px-4 md:px-16 mx-auto rounded-lg md:mt-8">
-      <div className="text-center mb-16">
-        <span className="gradient-text-primary mb-4 text-sm tracking-wider flex items-center">
+      <div className="text-center mb-16 ">
+        <span className="gradient-text-primary mb-4 text-sm tracking-wider flex items-center justify-center">
+          <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
           Blog{" "}
           <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
         </span>
+
         <h2 className="text-4xl font-bold mb-4 tracking-tight lg:text-5xl">
           Learning blockchain
           <br />

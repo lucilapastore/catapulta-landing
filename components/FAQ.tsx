@@ -41,7 +41,12 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto space-y-16 relative z-10">
         {/* Header */}
         <div className="text-center space-y-4">
-          <p className="text-primary text-sm uppercase tracking-wider">FAQs</p>
+          <span className="gradient-text-primary mb-4 text-sm tracking-wider flex items-center justify-center">
+            <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
+            FAQs{" "}
+            <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
+          </span>
+
           <h2 className="text-4xl md:text-5xl font-bold">
             We are here to help you
           </h2>
