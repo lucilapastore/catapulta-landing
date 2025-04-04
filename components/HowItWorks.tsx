@@ -6,7 +6,7 @@ export default function HowItWorks() {
       <div className="flex flex-col items-center text-center mb-8">
         <div className="text-primary text-sm tracking-wider mb-4 flex items-center">
           <span className="gradient-text-primary mb-6 text-sm tracking-wider flex items-center">
-            <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
+            <span className="mr-2 inline-block w-12 h-[1px] gradient-line-left"></span>
             How it works{" "}
             <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
           </span>
