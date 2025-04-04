@@ -42,7 +42,7 @@ export default function FAQ() {
         {/* Header */}
         <div className="text-center space-y-4">
           <span className="gradient-text-primary mb-4 text-sm tracking-wider flex items-center justify-center">
-            <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
+            <span className="mr-2 inline-block w-12 h-[1px] gradient-line-left"></span>
             FAQs{" "}
             <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
           </span>
