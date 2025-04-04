@@ -98,3 +98,11 @@
     background-clip: text;
   }
 }
+
+.text-effect {
+  text-shadow: 0 0 2rem rgba(255, 255, 255, 1);
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
