@@ -5,9 +5,11 @@ export default function HowItWorks() {
     <section className="container mx-auto px-4 py-16 md:py-24">
       <div className="flex flex-col items-center text-center mb-8">
         <div className="text-primary text-sm tracking-wider mb-4 flex items-center">
-          <div className="h-px w-6 bg-primary mr-2 "></div>
-          How it works
-          <div className="h-px w-6 bg-primary ml-2"></div>
+          <span className="gradient-text-primary mb-6 text-sm tracking-wider flex items-center">
+            <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
+            How it works{" "}
+            <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
+          </span>
         </div>
 
         <h5 className="text-4xl md:text-5xl lg:text-5xl font-bold mb-4 max-w-4xl">
