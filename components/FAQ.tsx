@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const faqs = [
   {
@@ -28,8 +29,16 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="w-full min-h-screen bg-background/80  text-white py-16 px-4 md:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto space-y-16">
+    <section className="w-full min-h-screen bg-background/80 text-white py-16 px-4 md:px-6 lg:px-8 relative">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/faqs_background.svg"
+          alt="Background pattern"
+          fill
+          className="object-cover opacity-20"
+        />
+      </div>
+      <div className="max-w-4xl mx-auto space-y-16 relative z-10">
         {/* Header */}
         <div className="text-center space-y-4">
           <p className="text-primary text-sm uppercase tracking-wider">FAQs</p>
@@ -75,7 +84,7 @@ export default function FAQ() {
           <Button
             variant="outline"
             size="lg"
-            className="bg-primary text-primary-foreground border-primary hover:bg-emerald-500 hover:text-black"
+            className="bg-primary text-primary-foreground border-primary hover:bg-emerald-500 hover:text-black text-lg"
           >
             Contact
           </Button>
