@@ -58,7 +58,7 @@ export default function StatsSection() {
 
       <div className="flex justify-center mt-8">
         <Link
-          className={cn(buttonVariants())}
+          className={cn(buttonVariants({ size: "lg" }), "text-lg")}
           href=""
           target="_blank"
           rel="noopener noreferrer"
