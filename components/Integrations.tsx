@@ -1,6 +1,7 @@
 import {
   Carousel,
   CarouselContent,
+  CarouselDots,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
@@ -90,10 +91,15 @@ export default function Integrations() {
             ))}
           </CarouselContent>
 
-          {/* Navigation buttons wrapper */}
-          <div className="flex justify-end gap-2 mt-8 pr-4">
-            <CarouselPrevious className="static sm:flex h-8 w-8" />
-            <CarouselNext className="static sm:flex h-8 w-8" />
+          <div className="flex justify-between items-center">
+            {/* Dots navigation */}
+            <CarouselDots />
+
+            {/* Navigation buttons wrapper */}
+            <div className="flex gap-2 mt-8 pr-4">
+              <CarouselPrevious className="static sm:flex h-8 w-8" />
+              <CarouselNext className="static sm:flex h-8 w-8" />
+            </div>
           </div>
         </Carousel>
       </div>
