@@ -70,7 +70,7 @@ export default function Integrations() {
     <section className="w-full bg-background/80 text-white py-16 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="mb-8">
-          <span className="gradient-text-primary mb-6 text-sm tracking-wider flex items-center">
+          <span className="gradient-text-primary mb-4 text-sm tracking-wider flex items-center">
             How it works{" "}
             <span className="ml-2 inline-block w-12 h-[1px] gradient-line"></span>
           </span>
