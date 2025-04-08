@@ -68,7 +68,7 @@ export default function PlatformTabs() {
         {platformTabs.map(({ id, heading, icon: Icon, description }) => (
           <TabsContent key={id} value={id} className="animate-fade-in-up">
             <div className="flex items-center gap-3 mb-4 justify-center">
-              <Icon className="w-8 h-8 text-white" />
+              <Icon className="w-8 h-8 text-white filter drop-shadow-lg" />
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-effect">
                 {heading}
               </h2>
