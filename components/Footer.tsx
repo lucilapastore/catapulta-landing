@@ -15,7 +15,7 @@ interface SocialLink extends FooterLink {
 
 const navigationLinks: FooterLink[] = [
   { label: "Hiring - Job board", href: "/hiring" },
-  { label: "Bootcamp Free", href: "/bootcamp" },
+  { label: "Free Bootcamp", href: "/bootcamp" },
   { label: "Documentation", href: "/docs" },
   { label: "Integrations", href: "/integrations" },
 ];
