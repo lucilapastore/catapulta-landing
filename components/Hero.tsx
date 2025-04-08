@@ -11,7 +11,7 @@ function BackgroundLight() {
 
 function BackgroundImages() {
   return (
-    <div className="hidden md:block absolute z-20 ml-20 bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px]">
+    <div className="hidden md:block absolute z-20 ml-20 top-[27%] left-1/2 -translate-x-1/2 w-[1000px] h-[500px]">
       <Image
         src="/images/hero_platform.png"
         alt="Hero Background"
@@ -26,11 +26,12 @@ function BackgroundImages() {
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[calc(100vh-16vh)] [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]">
+    <section className="relative w-full h-screen [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]">
       <BackgroundImages />
+
       <BackgroundLight />
 
-      <div className="relative flex items-center min-h-[calc(100vh-34vh)] justify-center">
+      <div className="relative flex items-center  md:min-h-[66vh] justify-center">
         <div className="w-full *:z-20 text-center px-4 flex flex-col justify-center items-center gap-8 max-w-2xl mx-auto animate-fade-in-down">
           <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl">
             <Balancer>
