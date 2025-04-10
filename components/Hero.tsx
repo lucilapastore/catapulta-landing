@@ -33,7 +33,7 @@ export default function Hero() {
 
       <div className="relative flex items-center  md:min-h-[66vh] justify-center">
         <div className="w-full *:z-20 text-center px-4 flex flex-col justify-center items-center gap-8 max-w-2xl mx-auto animate-fade-in-down">
-          <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl">
+          <h1 className="scroll-m-20 text-4xl font-bold tracking-tight lg:text-5xl mt-28 md:mt-0">
             <Balancer>
               Deploy smart <br /> contracts effortlessly
             </Balancer>
